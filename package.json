@@ -1,0 +1,28 @@
+{
+  "name": "MMM-NewsKOR",
+  "version": "1.0.0",
+  "description": "Magic Mirror Module for Korea News",
+  "main": "MMM-NewsKOR.js",
+  "keywords": [
+    "magic mirror",
+    "module",
+    "news",
+    "news.api"
+  ],
+  "author": [
+    "Luna",
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Luna-a-i/MMM-NewsKOR/issues",
+    "email": "luna@ntr.kr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Luna-a-i/MMM-NewsKOR"
+  },
+  "homepage": "https://github.com/Luna-a-i/MMM-NewsKOR",
+  "dependencies": {
+    "xml2js": "latest"
+  }
+}
