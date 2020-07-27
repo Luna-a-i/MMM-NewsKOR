@@ -17,6 +17,9 @@ module.exports = NodeHelper.create({
     if (noti == "START") {
       this.startInit()
     }
+    if (noti == "GETARTICLE") {
+      this.getArticle(payload)
+    }
   },
   initialize: function() {
     console.log(" ::: NEWS KOR ::: Initializing");
@@ -55,6 +58,17 @@ module.exports = NodeHelper.create({
     var timer = setTimeout(()=>{
       this.startInit()
     }, this.updateInterval)
+  },
+  getArticle: async function(url) {
+    console.log("Call Get Article");
+    var JSDOM = require('jsdom').JSDOM
+    var Readability = require('readability')
+    var linkDOM = null;
+    await JSDOM.fromURL(url).then(dom => {
+      linkDOM = dom;
+    });
+    var article = new Readability(linkDOM.window.document).parse();
+    this.sendSocketNotification("RECEIVEARTICLE",article);
   },
 
   finishInit: function() {

@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/Luna-a-i/MMM-NewsKOR",
   "dependencies": {
-    "xml2js": "latest"
+    "xml2js": "latest",
+    "mozilla/readability": "52ab9b5c8",
+    "jsdom": "latest"
   }
 }

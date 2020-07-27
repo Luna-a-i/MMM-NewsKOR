@@ -54,3 +54,11 @@
   font-size: 50%;
   color: #666;
 }
+
+#articleTitle {
+  font-weight: bold;
+}
+
+#articleText {
+  font-size: 90%;
+}

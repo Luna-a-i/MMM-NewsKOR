@@ -128,15 +128,27 @@ Module.register("MMM-NewsKOR", {
         this.draw()
       }
     }
+    if (noti == "RECEIVEARTICLE") {
+      console.log("Receive ArticleInfo");
+        var popupTitle = document.createElement("div");
+        popupTitle.id = "articleTitle";
+        popupTitle.innerText = payload.title;
+        var popupText = document.createElement("div");
+        popupText.id = "articleText";
+        popupText.innerHTML = payload.content;
+        var popupFrm = document.createElement("div");
+        popupFrm.appendChild(popupTitle);
+        popupFrm.appendChild(popupText);
+      popupScreen("뉴스",popupFrm,{ height: "80%"});
+    }
   },
 
   viewNews: function() {
     console.log("Open News");
-    // this.popup();
-    // 이 기능은 따로 구현해야 합니다. 테스트는 내부 모듈에서 했습니다.
+    this.popup();
   },
   popup: function() {
-
+    this.sendSocketNotification("GETARTICLE",this.newsLink);
   }
 
 
