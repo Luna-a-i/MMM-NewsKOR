@@ -57,8 +57,17 @@
 
 #articleTitle {
   font-weight: bold;
+  border-bottom: 1px solid #666;
+  padding-bottom: 10px;
 }
 
 #articleText {
-  font-size: 90%;
+  font-size: 70%;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+#articleText a {
+  text-decoration: none;
+  color: #aaa;
 }
