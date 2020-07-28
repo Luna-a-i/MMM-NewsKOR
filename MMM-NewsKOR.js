@@ -128,6 +128,7 @@ Module.register("MMM-NewsKOR", {
         this.draw()
       }
     }
+    
     if (noti == "RECEIVEARTICLE") {
       console.log("Receive ArticleInfo");
       if(payload.content == "") {
@@ -142,7 +143,7 @@ Module.register("MMM-NewsKOR", {
         var popupFrm = document.createElement("div");
         popupFrm.appendChild(popupTitle);
         popupFrm.appendChild(popupText);
-        popupScreen("뉴스",popupFrm,{ height: "80%"});
+        popupScreen("뉴스",popupFrm,{ height: "80%", width: "90%"});
     }
   },
 
